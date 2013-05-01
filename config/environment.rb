@@ -2,7 +2,7 @@
 require 'erb'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.18' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.17' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -19,7 +19,6 @@ Rails::Initializer.run do |config|
   require 'tmpdir'
   require 'fileutils'
   require 'iconv'
-  require 'forwardable'
   # Gems:
   config.gem 'json',                  :version => '>= 1.7.7'
 
@@ -35,6 +34,7 @@ Rails::Initializer.run do |config|
   config.gem 'jammit',                :version => '>= 0.5.0'
   config.gem 'docsplit',              :version => '>= 0.5.2'
   config.gem 'sunspot_rails',         :version => '>= 1.3.3'
+  config.gem 'curb'
   # running a pre-release to fix rake sunspot:solr:stop task bug
   # https://github.com/sunspot/sunspot/pull/221
   config.gem 'sunspot_solr',          :version => '>= 2.0.0.pre.120925'
